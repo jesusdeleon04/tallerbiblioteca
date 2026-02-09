@@ -44,18 +44,36 @@ public class BibliotecaApp {
     static void registrarPrestamo() { /* TODO */ }
     static void mostrarPrestamos() { /* TODO */ }
     static void buscarPrestamoPorId() { /* TODO */ }
-    static void actualizarPrestamo() { /* TODO */ }
-    static void eliminarPrestamo() { 
-        int i, j;
-        int id_eliminarPrestamo;
-        id_eliminarPrestamo = sc.nextInt();
-        for (i = 0; i < filas; i++){
-            if(prestamo[i][1] = id_eliminarPrestamo){
-                prestamos[i][1] = prestamos[i+1][1];
+    int id = leerEntero("Ingrese el ID a buscar: ");
+        for (int i = 0; i < filas; i++) {
+            if ((int) prestamos[i][0] == id) {
+                System.out.println(
+                    "ID: " + prestamos[i][0] +
+                    ", Usuario: " + prestamos[i][1] +
+                    ", Libro: " + prestamos[i][2] +
+                    ", Días: " + prestamos[i][3] +
+                    ", Multa/día: " + prestamos[i][4]
+                );
+                return;
             }
         }
-     }
+        System.out.println("Préstamo no encontrado.");
+    static void actualizarPrestamo() { /* TODO */ }
+    int id = leerEntero("Ingrese el ID a actualizar: ");
+        for (int i = 0; i < filas; i++) {
+            if ((int) prestamos[i][0] == id) {
+                prestamos[i][1] = leerTexto("Nuevo nombre de usuario: ");
+                prestamos[i][2] = leerTexto("Nuevo título del libro: ");
+                prestamos[i][3] = leerEntero("Nuevos días de préstamo: ");
+                prestamos[i][4] = leerEntero("Nueva multa por día: ");
+                System.out.println("Préstamo actualizado.");
+                return;
+            }
+        }
+        System.out.println("Préstamo no encontrado.");
+    static void eliminarPrestamo() { 
 
+    }
     // ====== Cálculo (por implementar) ======
     static void calcularTotalMultas() { 
         float calculo[] = new float[n];

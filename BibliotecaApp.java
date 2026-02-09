@@ -75,19 +75,8 @@ public class BibliotecaApp {
 
     }
     // ====== Cálculo (por implementar) ======
-    static void calcularTotalMultas() { 
-        float calculo[] = new float[n];
-        for(int i = 0; i < filas; i++){
-            float calculos = prestamos[i][4] * prestamos[i][5];
-            calculo[i] = calculos;
+    static void calcularTotalMultas() {
         }
-        for(int i = 0; i < filas; i++){
-            System.out.printn(calculo[i]);
-        }
-     }
-
-     
-
     // ====== Utilidades mínimas ======
     static int leerEntero(String msg) {
         while (true) {

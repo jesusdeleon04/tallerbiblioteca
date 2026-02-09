@@ -58,7 +58,6 @@ public class BibliotecaApp {
             }
         }
         System.out.println("Préstamo no encontrado.");
-    static void actualizarPrestamo() { /* TODO */ }
     int id = leerEntero("Ingrese el ID a actualizar: ");
         for (int i = 0; i < filas; i++) {
             if ((int) prestamos[i][0] == id) {
